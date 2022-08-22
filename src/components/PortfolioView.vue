@@ -5,13 +5,13 @@
       <div class="divider"></div>
     </div>
     <div class="container">
-      <div class="card" >
+      <div class="card">
         <div class="card__img"></div>
         <div class="card__title">
-          <h2>{{card[0].title}}</h2>
+          <h2>{{ card[0].title }}</h2>
         </div>
         <div class="card__desc">
-          <h4>{{card[0].details}}</h4>
+          <h4>{{ card[0].details }}</h4>
         </div>
         <div class="button-content">
           <button class="project-details-button download-cv">
@@ -20,13 +20,17 @@
         </div>
       </div>
     </div>
-    <!--
-    <FooterView/>-->
+    <FooterView />
   </div>
 </template>
 
 <script>
+import FooterView from "../components/FooterView.vue";
 export default {
+  name: "FooterView",
+  components: {
+    FooterView,
+  },
   data() {
     return {
       card: [
@@ -61,17 +65,17 @@ export default {
   },
 };
 </script>
-<!--
+
 <script>
-import FooterView from '../components/FooterView.vue';
+import FooterView from "../components/FooterView.vue";
 export default {
-  name: 'FooterView',
-  components:{
+  name: "FooterView",
+  components: {
     FooterView,
-}
-}
+  },
+};
 </script>
--->
+
 <style lang="scss" scoped>
 .portfolio {
   width: 100vw;
