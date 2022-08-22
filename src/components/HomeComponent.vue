@@ -6,8 +6,8 @@
           <h1>I'm <span>Daniel</span> Calcina</h1>
           <p>Web Developer</p>
           <h3>Using tools like Vue, Vuetify, Javascript, HTML and css</h3>
-          <a download href="#"
-            ><button class="download-cv">Download CV</button></a
+          <a target="_blank" href="https://docs.google.com/document/d/1PWonPvtNTc67SIxtY5cl0FUwdgWZhkYZpBzlB6pocKo/edit?usp=sharing"
+            ><button class="download-cv">CV</button></a
           >
         </div>
         <img

@@ -1,26 +1,26 @@
 <template>
   <div class="home">
-    <HomeView/>
-    <AboutView/>
-    <PortfolioView/>
-    <ContactView/>
+    <HomeComponent/>
+    <AboutComponent/>
+    <PortfolioComponent/>
+    <ContactComponent/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import AboutView from '@/components/AboutView.vue';
-import ContactView from '@/components/ContactView.vue';
-import HomeView from '@/components/HomeView.vue';
-import PortfolioView from '@/components/PortfolioView.vue';
+import AboutComponent from '@/components/AboutComponent.vue';
+import ContactComponent from '@/components/ContactComponent.vue';
+import HomeComponent from '@/components/HomeComponent.vue';
+import PortfolioComponent from '@/components/PortfolioComponent.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    HomeView,
-    AboutView,
-    PortfolioView,
-    ContactView
+    HomeComponent,
+    AboutComponent,
+    PortfolioComponent,
+    ContactComponent
   }
 }
 </script>

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../components/HomeView.vue'
 import DefaultLayout from '../layouts/DefaultLayout'
+import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
 
@@ -17,7 +17,7 @@ const routes = [
   {
     path: '/about',
     name: 'about',
-    component: ()=> import ('../components/AboutView.vue'),
+    component: ()=> import ('../components/AboutComponent.vue'),
     meta:{
       layout:DefaultLayout
     }
@@ -25,7 +25,7 @@ const routes = [
   {
     path: '/portfolio',
     name: 'portfolio',
-    component: ()=> import ('../components/PortfolioView.vue'),
+    component: ()=> import ('../components/PortfolioComponent.vue'),
     meta:{
       layout:DefaultLayout
     }
@@ -33,7 +33,7 @@ const routes = [
   {
     path: '/contact',
     name: 'contact',
-    component: ()=> import ('../components/ContactView.vue'),
+    component: ()=> import ('../components/ContactComponent.vue'),
     meta:{
       layout:DefaultLayout
     }

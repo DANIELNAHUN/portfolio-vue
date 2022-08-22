@@ -5,73 +5,49 @@
       <div class="divider"></div>
     </div>
     <div class="container">
-      <div class="card">
+      <div class="card" v-for="(card, index) in cardList" :key="index">
         <div class="card__img"></div>
         <div class="card__title">
-          <h2>{{ card[0].title }}</h2>
-        </div>
-        <div class="card__desc">
-          <h4>{{ card[0].details }}</h4>
+          <h3>{{ card.title }}</h3>
         </div>
         <div class="button-content">
-          <button class="project-details-button download-cv">
-            <a href="#">Miralo</a>
-          </button>
+          <v-btn rounded>
+            <a target="_blank" :href="card.link">Explore</a>
+          </v-btn>
         </div>
       </div>
     </div>
-    <FooterView />
   </div>
 </template>
 
 <script>
-import FooterView from "../components/FooterView.vue";
 export default {
-  name: "FooterView",
-  components: {
-    FooterView,
-  },
+  name: "PortfolioView",
   data() {
     return {
-      card: [
+      cardList: [
         {
           id: 0,
           title: "ToDo - VueCDN",
-          details: "Listado de Tareas ",
           link: "https://danielnahun.github.io/toDo-VueCDN/ ",
         },
         {
           id: 1,
           title: "Contador -VueCDN",
-          details: "Contador con barra de progreso",
           link: "https://danielnahun.github.io/ContadorVue/",
         },
         {
           id: 2,
           title: "Testing Flexbox - VueCli",
-          details:
-            "Diversos Componentes Cards, Servicio de Música, Template para Negocios, Servicio de Ventas de Autos",
           link: "https://danielnahun.github.io/testing-flexbox/  ",
         },
         {
           id: 3,
           title: "Testing Router -Vue Cli",
-          details:
-            "Componentes enrutados usando la API de galería de imágenes en Unsplash, carta de evaluación de cursos, y un cronómetro que calcula el paso entre la fecha indicada y la fecha actual.",
           link: "https://danielnahun.github.io/testing-router-vue/",
         },
       ],
     };
-  },
-};
-</script>
-
-<script>
-import FooterView from "../components/FooterView.vue";
-export default {
-  name: "FooterView",
-  components: {
-    FooterView,
   },
 };
 </script>
@@ -105,6 +81,7 @@ export default {
 }
 
 .card {
+  height: 300px;
   width: 300px;
   background-color: #2b3058;
   margin: 1em;
@@ -119,6 +96,7 @@ export default {
 
 .card__title {
   padding: 20px;
+  height: 30%;
 }
 
 .card__proyect-links {
@@ -140,8 +118,8 @@ export default {
   margin: 1em;
 }
 
-.project-details-button a {
+.button-content a {
   text-decoration: none;
-  color: #191c32;
 }
+
 </style>

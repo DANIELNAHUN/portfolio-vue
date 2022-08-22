@@ -1,13 +1,13 @@
 <template>
   <div class="footer">
       <div class="footer-content">
-        <h2>John Carter</h2>
+        <h2>Daniel Calcina</h2>
         <h5>Frontend Developer</h5>
       </div>
       <div class="sotial-networks">
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-linkedin"></i>
-        <i class="fab fa-twitter-square"></i>
+        <a target="_blank" href="https://www.instagram.com/calcinafuentes.daniel/"><v-icon>mdi-instagram</v-icon></a>
+        <a target="_blank" href="https://www.facebook.com/danahcalfu"><v-icon>mdi-facebook</v-icon></a>
+        <a target="_blank" href="linkedin.com/in/daniel-nahun-calcina-fuentes/"><v-icon>mdi-linkedin</v-icon></a>
       </div>
     </div>
 </template>
@@ -22,8 +22,8 @@ export default{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 200px;
+  width: 100vw;
+  height: 170px;
   padding: 2em;
   background-color: aqua;
 }
@@ -46,5 +46,8 @@ export default{
 
 .sotial-networks i {
   font-size: 1.5em;
+}
+.sotial-networks a {
+  text-decoration: none;
 }
 </style>

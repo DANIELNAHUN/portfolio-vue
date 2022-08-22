@@ -23,9 +23,19 @@
     <div>
       <slot></slot>
     </div>
+    <FooterView/>
   </div>
-
 </template>
+
+<script>
+import FooterView from "../components/FooterComponent.vue";
+export default{
+  name: "DefaulLayout",
+  components: {
+    FooterView,
+  },
+}
+</script>
 
 <style scoped>
 .navbar {
