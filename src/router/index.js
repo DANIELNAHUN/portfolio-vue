@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import DefaultLayout from '../layouts/DefaultLayout'
-import HomeView from '../views/HomeView.vue'
+//import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
 
@@ -9,7 +9,8 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView,
+    /*component: HomeView,*/
+    component: ()=> import ('../components/HomeComponent.vue'),
     meta:{
       layout: DefaultLayout
     }
@@ -17,6 +18,7 @@ const routes = [
   {
     path: '/about',
     name: 'about',
+    /*component: AboutView,*/
     component: ()=> import ('../components/AboutComponent.vue'),
     meta:{
       layout:DefaultLayout
