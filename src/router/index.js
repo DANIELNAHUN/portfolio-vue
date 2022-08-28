@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import DefaultLayout from '../layouts/DefaultLayout'
-//import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
 
@@ -9,8 +9,8 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    /*component: HomeView,*/
-    component: ()=> import ('../components/HomeComponent.vue'),
+    component: HomeView,
+    /*component: ()=> import ('../components/HomeComponent.vue'),*/
     meta:{
       layout: DefaultLayout
     }
@@ -19,7 +19,7 @@ const routes = [
     path: '/about',
     name: 'about',
     /*component: AboutView,*/
-    component: ()=> import ('../components/AboutComponent.vue'),
+    component: ()=> import ('../components/AppAbout.vue'),
     meta:{
       layout:DefaultLayout
     }
@@ -43,7 +43,24 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  // eslint-disable-next-line no-unused-vars
+  scrollBehavior (to, from, savedPosition) {
+    if (to.hash) {
+      // eslint-disable-next-line no-unused-vars
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve({
+            selector: to.hash,
+            offset: { x: 10, y: 0 },
+            behavior: 'smooth'
+          })
+        }, 2000)
+      })
+    }
+
+    return { x: 0, y: 0 }
+  }
 })
 
 export default router

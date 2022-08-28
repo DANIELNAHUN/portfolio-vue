@@ -10,7 +10,7 @@
           >
         </li>
         <li>
-          <a><router-link to="/about">Quien Soy</router-link></a>
+          <a href="#about-section">Quien soy</a>
         </li>
         <li>
           <a><router-link to="/portfolio">Portafolio</router-link></a>
