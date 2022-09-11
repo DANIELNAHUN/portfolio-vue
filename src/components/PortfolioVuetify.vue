@@ -71,7 +71,7 @@
         {
           title: "My Portfolio - Vue Cli",
           to: "https://danielnahun.github.io/portfolio-vue/",
-          src: "https://github.com/DANIELNAHUN/testing-router-vue/blob/main/apiPage.png?raw=true",
+          src: "https://github.com/DANIELNAHUN/portfolio-vue/blob/main/PortfolioHome.png?raw=true",
           flex:4
         },
       ],
