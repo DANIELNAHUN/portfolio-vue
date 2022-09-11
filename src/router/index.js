@@ -78,22 +78,22 @@ const routes = [
 const router = new VueRouter({
   routes,
   // eslint-disable-next-line no-unused-vars
-  // scrollBehavior (to, from, savedPosition) {
-  //   if (to.hash) {
-  //     // eslint-disable-next-line no-unused-vars
-  //     return new Promise((resolve, reject) => {
-  //       setTimeout(() => {
-  //         resolve({
-  //           selector: to.hash,
-  //           offset: { x: 10, y: 0 },
-  //           behavior: 'smooth'
-  //         })
-  //       }, 2000)
-  //     })
-  //   }
+  scrollBehavior (to, from, savedPosition) {
+    if (to.hash) {
+      // eslint-disable-next-line no-unused-vars
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve({
+            selector: to.hash,
+            offset: { x: 10, y: 0 },
+            behavior: 'smooth'
+          })
+        }, 2000)
+      })
+    }
 
-  //   return { x: 0, y: 0 }
-  // }
+    return { x: 0, y: 0 }
+  }
 })
 
 export default router

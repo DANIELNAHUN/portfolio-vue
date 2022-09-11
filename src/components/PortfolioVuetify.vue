@@ -51,7 +51,7 @@
           flex:4
         },
         {
-          title: "Contador -VueCDN",
+          title: "Contador - VueCDN",
           to: "https://danielnahun.github.io/ContadorVue/",
           src: "https://github.com/DANIELNAHUN/ContadorVue/raw/master/app.png",
           flex:4
@@ -63,8 +63,14 @@
           flex:4
         },
         {
-          title: "Testing Router -Vue Cli",
+          title: "Testing Router - Vue Cli",
           to: "https://danielnahun.github.io/testing-router-vue/",
+          src: "https://github.com/DANIELNAHUN/testing-router-vue/blob/main/apiPage.png?raw=true",
+          flex:4
+        },
+        {
+          title: "My Portfolio - Vue Cli",
+          to: "https://danielnahun.github.io/portfolio-vue/",
           src: "https://github.com/DANIELNAHUN/testing-router-vue/blob/main/apiPage.png?raw=true",
           flex:4
         },
