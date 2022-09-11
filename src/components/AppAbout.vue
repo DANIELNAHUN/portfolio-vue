@@ -26,6 +26,7 @@
   width: 100vw;
   align-items: center;
   color: #ffff;
+  background-color: #00ffff;
 }
 
 .about img {

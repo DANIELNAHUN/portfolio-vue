@@ -6,33 +6,33 @@
       </div>
       <ul class="menu">
         <li>
-          <a><router-link to="/">Inicio</router-link></a
+          <a href="#home-section">Inicio</a
           >
         </li>
         <li>
           <a href="#about-section">Quien soy</a>
         </li>
         <li>
-          <a><router-link to="/portfolio">Portafolio</router-link></a>
+          <a href="#portfolio-section">Portafolio</a>
         </li>
         <li>
-          <a><router-link to="/contact">Contacto</router-link></a>
+          <a href="#contact-section">Contacto</a>
         </li>
       </ul>
     </div>
     <div>
       <slot></slot>
     </div>
-    <FooterView/>
+    <AppFooter/>
   </div>
 </template>
 
 <script>
-import FooterView from "../components/FooterComponent.vue";
+import AppFooter from "../components/AppFooter.vue";
 export default{
   name: "DefaulLayout",
   components: {
-    FooterView,
+    AppFooter,
   },
 }
 </script>
@@ -42,6 +42,7 @@ export default{
   display: flex;
   justify-content: space-between;
   padding: 2em;
+  background-color: #191c32;
 }
 .brand {
   margin-top: -7px;

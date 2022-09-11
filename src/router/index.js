@@ -1,3 +1,4 @@
+import VuetifyLayout from '@/layouts/VuetifyLayout.vue'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import DefaultLayout from '../layouts/DefaultLayout'
@@ -7,7 +8,7 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: HomeView,
     /*component: ()=> import ('../components/HomeComponent.vue'),*/
@@ -27,7 +28,7 @@ const routes = [
   {
     path: '/portfolio',
     name: 'portfolio',
-    component: ()=> import ('../components/PortfolioComponent.vue'),
+    component: ()=> import ('../components/AppPortfolio.vue'),
     meta:{
       layout:DefaultLayout
     }
@@ -35,9 +36,41 @@ const routes = [
   {
     path: '/contact',
     name: 'contact',
-    component: ()=> import ('../components/ContactComponent.vue'),
+    component: ()=> import ('../components/AppContact.vue'),
     meta:{
       layout:DefaultLayout
+    }
+  },
+  {
+    path: '/',
+    name: 'vuetifyhome',
+    component: ()=> import ('@/views/PortfolioVuetify.vue'),
+    meta:{
+      layout:VuetifyLayout
+    }
+  },
+  {
+    path: '/vuetifyabout',
+    name: 'vuetifyabout',
+    component: ()=> import ('@/views/AboutView.vue'),
+    meta:{
+      layout:VuetifyLayout
+    }
+  },
+  {
+    path: '/portfoliovuetify',
+    name: 'portfoliovuetify',
+    component: ()=> import ('@/views/PortfolioView.vue'),
+    meta:{
+      layout:VuetifyLayout
+    }
+  },
+  {
+    path: '/contactvuetify',
+    name: 'contactvuetify',
+    component: ()=> import ('@/views/ContactView.vue'),
+    meta:{
+      layout:VuetifyLayout
     }
   },
 ]
@@ -45,22 +78,22 @@ const routes = [
 const router = new VueRouter({
   routes,
   // eslint-disable-next-line no-unused-vars
-  scrollBehavior (to, from, savedPosition) {
-    if (to.hash) {
-      // eslint-disable-next-line no-unused-vars
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve({
-            selector: to.hash,
-            offset: { x: 10, y: 0 },
-            behavior: 'smooth'
-          })
-        }, 2000)
-      })
-    }
+  // scrollBehavior (to, from, savedPosition) {
+  //   if (to.hash) {
+  //     // eslint-disable-next-line no-unused-vars
+  //     return new Promise((resolve, reject) => {
+  //       setTimeout(() => {
+  //         resolve({
+  //           selector: to.hash,
+  //           offset: { x: 10, y: 0 },
+  //           behavior: 'smooth'
+  //         })
+  //       }, 2000)
+  //     })
+  //   }
 
-    return { x: 0, y: 0 }
-  }
+  //   return { x: 0, y: 0 }
+  // }
 })
 
 export default router
