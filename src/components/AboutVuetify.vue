@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-card color="secondary">
-      <v-row align="center">
+      <v-row align="center" no-gutters>
         <v-col sm="5">
           <v-img
             width="100%"
